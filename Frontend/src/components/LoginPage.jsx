@@ -12,9 +12,9 @@ const LoginPage = () => {
 
 
         <div className='sm:w-[60%] lg:w-[23%] w-[90%]  bg-[#161616] mx-auto rounded-[12px] '>
-          <div className='flex items-center flex-col py-4 mx-auto text-center gap-3 sm:px-6 px-3'>
-            <img src={logo} alt="PromptWorld Logo" className='w-[55px] h-[50px] border rounded-[8px]' />
-            <h1 className='text-[35px] font-bold  text-[#9FFC59]'>Prompt  World</h1>
+          <div className='flex items-center flex-col py-4 mx-auto text-center gap-1 sm:px-6 px-3'>
+            <img src={logo} alt="PromptWorld Logo" className='w-[55px] h-[50px] border rounded-[8px] mt-3' />
+            <h1 className='text-[35px] font-bold  text-[#9FFC59] mb-2'>Prompt  World</h1>
             <h2 className='text-[#868686] '>Welcome back! Choose your prefered sign-in method to continue</h2>
 
             <a className="flex w-full justify-between items-center gap-3 rounded-xl border border-gray-700 bg-[#212020] px-4 py-3 text-white hover:bg-[#272727] mt-10">
@@ -27,7 +27,7 @@ const LoginPage = () => {
 
             <span className='sm:text-[12px] text-[10px] flex items-center justify-center gap-1 w-full py-2 rounded-xl mt-5 bg-[#212020] text-[#868686]'><Shield /> Secure authentication powered by supabase Auth</span>
 
-            <span className='sm:text-[14px] text-[12px] text-[#868686] '> By continuing, you agree to our <a href="" className='text-[#9FFC59] underline '>Terms of Service</a> and <a href="" className='text-[#9FFC59] underline'>Privacy Policy</a></span>
+            <span className='sm:text-[14px] text-[12px] text-[#868686] mt-5'> By continuing, you agree to our <a href="" className='text-[#9FFC59] underline '>Terms of Service</a> and <a href="" className='text-[#9FFC59] underline'>Privacy Policy</a></span>
 
             
           </div>
