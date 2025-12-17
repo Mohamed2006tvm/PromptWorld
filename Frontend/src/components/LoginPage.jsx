@@ -7,8 +7,8 @@ const LoginPage = () => {
   return (
     <>
       <div className='w-[100%] bg-[#000] mx-auto min-h-screen md:py-50 sm:py-50  py-18 '>
-         <div className="absolute top-0 left-0 md:w-[400px] sm:w-[200px]  md:h-[400px] sm:h-[200px]   bg-[#00ff88]/40 blur-[180px]" />
-      <div className="absolute bottom-0 right-0 md:w-[400px] sm:w-[200px]  md:h-[400px] sm:h-[200px]  bg-[#00ff88]/40 blur-[180px]" />
+         <div className="absolute top-0 left-0 md:w-[300px] sm:w-[100px]  md:h-[300px] sm:h-[200px]   bg-[#00ff88]/40 blur-[180px]" />
+      <div className="absolute bottom-0 right-0 md:w-[300px] sm:w-[100px]  md:h-[300px] sm:h-[200px]  bg-[#00ff88]/40 blur-[180px]" />
 
 
         <div className='sm:w-[60%] lg:w-[23%] w-[90%]  bg-[#161616] mx-auto rounded-[12px] '>
