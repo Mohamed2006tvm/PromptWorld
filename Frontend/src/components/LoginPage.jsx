@@ -3,12 +3,7 @@ import logo from '../assests/logo3.jpg'
 import google from '../assests/google icon.png'
 import { MoveRight,Shield,Copyright} from 'lucide-react'
 import { supabase } from './Supabase.js'
-// import {createClient} from '@supabase/supabase-js'
 
-// const supabase = createClient(
-//   "https://ogvxjoditxdslztxnuko.supabase.co",
-//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ndnhqb2RpdHhkc2x6dHhudWtvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwMTgwOTUsImV4cCI6MjA4MTU5NDA5NX0.X7y1twhGMWXsblyKHM3q3duypujJAuUJA0tjEy-jKQM"
-// )
 
 const LoginPage = () => {
 
