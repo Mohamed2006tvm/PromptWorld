@@ -1,9 +1,34 @@
 import React from 'react'
 import logo from '../assests/logo3.jpg'
 import google from '../assests/google icon.png'
-import { MoveRight,Shield,Copyright  } from 'lucide-react'
+import { MoveRight,Shield,Copyright} from 'lucide-react'
+import { supabase } from './Supabase.js'
+// import {createClient} from '@supabase/supabase-js'
+
+// const supabase = createClient(
+//   "https://ogvxjoditxdslztxnuko.supabase.co",
+//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ndnhqb2RpdHhkc2x6dHhudWtvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwMTgwOTUsImV4cCI6MjA4MTU5NDA5NX0.X7y1twhGMWXsblyKHM3q3duypujJAuUJA0tjEy-jKQM"
+// )
 
 const LoginPage = () => {
+
+
+
+  const handleGoogleLogin = async ()=>{
+    const {error,data} = await supabase.auth.signInWithOAuth({
+      provider:'google',
+      options:{
+        redirectTo:'http://localhost:5173/navbar'
+      }
+    })
+
+    if(error){
+      alert("Error logging in");
+      console.log(error)
+    }
+
+  }
+
   return (
     <>
       <div className='w-[100%] bg-[#000] mx-auto min-h-screen md:py-50 sm:py-50  py-18 '>
@@ -17,13 +42,13 @@ const LoginPage = () => {
             <h1 className='text-[35px] font-bold  text-[#9FFC59] mb-2'>Prompt  World</h1>
             <h2 className='text-[#868686] '>Welcome back! Choose your prefered sign-in method to continue</h2>
 
-            <a className="flex w-full justify-between items-center gap-3 rounded-xl border border-gray-700 bg-[#212020] px-4 py-3 text-white hover:bg-[#272727] mt-10">
+            <button onClick={handleGoogleLogin} className="flex w-full justify-between items-center gap-3 rounded-xl border border-gray-700 bg-[#212020] px-4 py-3 text-white hover:bg-[#272727] mt-10">
               <div className='flex gap-2 items-center'>
                 <img src={google} className='w-6'/>
               <span className="text-center">Continue with Google</span>
               </div>
               <MoveRight/>
-            </a>
+            </button>
 
             <span className='sm:text-[12px] text-[10px] flex items-center justify-center gap-1 w-full py-2 rounded-xl mt-5 bg-[#212020] text-[#868686]'><Shield /> Secure authentication powered by supabase Auth</span>
 
