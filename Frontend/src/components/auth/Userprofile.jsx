@@ -31,7 +31,7 @@ const UserProfile = () => {
     <div className="  ">
       <div
         className="flex items-center justify-between gap-3 
-        rounded-[12px] p-3 cursor-pointer"      >
+        rounded-[12px] p-3 cursor-pointer flex-col-reverse md:flex-row"      >
         {/* Avatar */}
         <div className="flex items-center gap-3">
           <div
@@ -42,7 +42,7 @@ const UserProfile = () => {
           </div>
 
           {/* Name & Email */}
-          <div className="leading-tight">
+          <div className="md:block hidden ">
             <p className="text-sm font-semibold text-white">
               {name}
             </p>
@@ -52,9 +52,8 @@ const UserProfile = () => {
           </div>
         </div>
 
-        {/* Menu
-        <MoreVertical size={18} className="text-[#868686]" /> */}
-
+      
+        {/* <MoreVertical size={18} className="text-[#868686]" />  */}
           <SignOutButton/>
       </div>
     </div>

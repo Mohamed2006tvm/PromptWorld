@@ -11,27 +11,27 @@ const SideNav = () => {
     "hover:bg-[#262626] hover:text-[#00ff88] transition-all duration-200"
 
   return (
-    <div className="px-2 w-[15%] min-h-screen bg-[#1D1D1D]">
+    <div className="md:px-2 md:w-[15%] w-15 min-h-screen bg-[#1D1D1D]">
 
       <div className="flex px-3 gap-3 items-center py-3">
-        <img src={logo} className="w-[45px] h-[45px] rounded-[8px]" />
+        <img src={logo} className="md:w-[45px] w-[35px] md:h-[45px] h-[35px] rounded-[8px]" />
         <div>
-          <h1 className="text-[18px] font-bold text-white">Prompt World</h1>
-          <p className="text-[#868686]">AI Generator</p>
+          <h1 className="text-[18px] font-bold text-white md:block hidden">Prompt World</h1>
+          <p className="text-[#868686] md:block hidden">AI Generator</p>
         </div>
       </div>
 
-      <div className="my-6 space-y-2 flex flex-col gap-145">
+      <div className="my-6 space-y-2 flex flex-col md:gap-145 gap-70">
       <div>
 
         <Link to="/dashboard" className={navItem}>
           <LayoutDashboard size={18} />
-          <span>Dashboard</span>
+          <span className='md:block hidden'>Dashboard</span>
         </Link>
 
         <Link to="/projects" className={navItem}>
           <FolderOpenDot size={18} />
-          <span>Projects</span>
+          <span className='md:block hidden'>Projects</span>
         </Link>
       </div>
 
@@ -39,11 +39,11 @@ const SideNav = () => {
           <div className='flex flex-col px-1 '>
             <Link className={navItem}>
               <SquareChartGantt />
-              <span>Billing and Plans</span> 
+              <span className='md:block hidden'>Billing and Plans</span> 
           </Link>
           <Link className={navItem}>
               <BadgeQuestionMark />
-              <span>Help & Support</span>
+              <span className='md:block hidden'>Help & Support</span>
           </Link>
           </div>
 
