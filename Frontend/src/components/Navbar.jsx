@@ -33,7 +33,7 @@ const Navbar = () => {
           <Moon size={20} />
         </button>
 
-        <SignOutButton/>
+        {/* <SignOutButton/> */}
       </div>
     </div>
   )

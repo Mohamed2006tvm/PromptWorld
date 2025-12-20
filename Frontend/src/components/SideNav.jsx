@@ -1,7 +1,8 @@
 import React from 'react'
-import { LayoutDashboard, FolderOpenDot } from 'lucide-react'
+import { LayoutDashboard, FolderOpenDot ,SquareChartGantt,BadgeQuestionMark} from 'lucide-react'
 import logo from './assests/logo3.jpg'
 import { Link } from 'react-router-dom'
+import UserProfile from './auth/Userprofile'
 
 const SideNav = () => {
 
@@ -20,7 +21,8 @@ const SideNav = () => {
         </div>
       </div>
 
-      <div className="my-6 space-y-2">
+      <div className="my-6 space-y-2 flex flex-col gap-145">
+      <div>
 
         <Link to="/dashboard" className={navItem}>
           <LayoutDashboard size={18} />
@@ -31,6 +33,22 @@ const SideNav = () => {
           <FolderOpenDot size={18} />
           <span>Projects</span>
         </Link>
+      </div>
+
+        <div className='flex flex-col gap-6'>
+          <div className='flex flex-col px-1 '>
+            <Link className={navItem}>
+              <SquareChartGantt />
+              <span>Billing and Plans</span> 
+          </Link>
+          <Link className={navItem}>
+              <BadgeQuestionMark />
+              <span>Help & Support</span>
+          </Link>
+          </div>
+
+          <UserProfile/>
+        </div>
 
       </div>
     </div>
