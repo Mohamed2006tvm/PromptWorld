@@ -1,6 +1,7 @@
 import React from 'react'
 import { Moon, Search } from 'lucide-react'
 import SignOutButton from './auth/Signout'
+import Userlogo from './auth/Userlogo'
 
 
 const Navbar = () => {
@@ -33,7 +34,7 @@ const Navbar = () => {
           <Moon size={20} />
         </button>
 
-        {/* <SignOutButton/> */}
+        <Userlogo/>
       </div>
     </div>
   )

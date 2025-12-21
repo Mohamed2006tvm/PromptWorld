@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { MoreVertical } from "lucide-react"
 import { supabase } from "../../Supabase"
 import SignOutButton from "./Signout"
 
@@ -28,7 +27,7 @@ const UserProfile = () => {
   const avatarLetter = name?.charAt(0).toUpperCase()
 
   return (
-    <div className="  ">
+    <div>
       <div
         className="flex items-center justify-between gap-3 
         rounded-[12px] p-3 cursor-pointer flex-col-reverse md:flex-row"      >
