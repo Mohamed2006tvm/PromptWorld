@@ -7,14 +7,9 @@ import DashboardHome from './DashboardHome'
 const Dashboard = () => {
   return (
     <>
-      <div className='flex'>
         <div className='flex items-start '>
           <SideNav />
           <Navbar />
-        </div>
-        <div>
-          <DashboardHome/>
-        </div>
       </div>
     </>
   )
