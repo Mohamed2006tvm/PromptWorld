@@ -13,7 +13,7 @@ const Navbar = () => {
     "transition-all duration-200 active:scale-95"
 
   return (
-    <div className="sm:w-[96%] md:w-[85%] w-[90%] py-3 bg-[#1D1D1D]  
+    <div className="py-3 bg-[#1D1D1D]  
       flex sm:justify-between justify-end items-center px-5 gap-1 sm:gap-0">
 
       <div className="relative sm:w-[300px] hidden sm:block">

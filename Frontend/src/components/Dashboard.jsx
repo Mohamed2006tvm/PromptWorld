@@ -7,9 +7,12 @@ import DashboardHome from './DashboardHome'
 const Dashboard = () => {
   return (
     <>
-        <div className='flex items-start '>
+        <div className='flex'>
           <SideNav />
-          <Navbar />
+          <div className='w-full'>
+            <Navbar />
+            <DashboardHome/>
+          </div>
       </div>
     </>
   )
