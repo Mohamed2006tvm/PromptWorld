@@ -10,7 +10,7 @@ const UserProfile = () => {
       const { data, error } = await supabase.auth.getUser()
       if (!error) {
         setUser(data.user)
-        console.log(user.user_metadata.name)
+        console.log(user)
       }
     }
 
@@ -30,7 +30,7 @@ const UserProfile = () => {
     <div>
       <div
         className="flex items-center justify-between gap-3 
-        rounded-[12px] p-3 cursor-pointer flex-col-reverse md:flex-row"      >
+        rounded-[12px] p-3 cursor-pointer flex-col-reverse md:flex-row">
         {/* Avatar */}
         <div className="flex items-center gap-3">
           <div
@@ -46,22 +46,16 @@ const UserProfile = () => {
               {name}
             </p>
             <p className="text-xs text-[#868686] truncate max-w-[140px]">
-              {email}
+              {email}   
             </p>
           </div>
         </div>
 
-      
         {/* <MoreVertical size={18} className="text-[#868686]" />  */}
           <SignOutButton/>
-
-
-
-
-      
       </div>
     </div>
   )
-}
+} 
 
 export default UserProfile
