@@ -1,5 +1,5 @@
-import { Plus,MessageSquareText,FolderClosed,LayoutTemplate } from 'lucide-react'
 import React from 'react'
+import { Plus, MessageSquareText, FolderClosed, LayoutTemplate } from 'lucide-react'
 
 const DashboardHome = () => {
     return (
@@ -12,7 +12,7 @@ const DashboardHome = () => {
                             <span className='text-[#868686]'>Generate the prompts easily....</span>
                         </div>
                         <div>
-                            <button className='flex items-center gap-1 text-black bg-[#00ff88] px-3 py-2 rounded-[12px] cursor-pointer'> <Plus/>New Project</button>
+                            <button className='flex items-center gap-1 text-black bg-[#00ff88] px-3 py-2 rounded-[12px] cursor-pointer'> <Plus />New Project</button>
                         </div>
                     </div>
 
@@ -24,7 +24,7 @@ const DashboardHome = () => {
                                 <span className='text-[25px] text-white font-bold'>0</span>
                             </div>
                             <div>
-                                <MessageSquareText color='#00ff88'/>
+                                <MessageSquareText color='#00ff88' />
                             </div>
                         </div>
                         <div className='flex justify-between items-start bg-[#1D1D1D] px-5 py-5 rounded-[12px] w-[300px]'>
@@ -33,7 +33,7 @@ const DashboardHome = () => {
                                 <span className='text-[25px] text-white font-bold' >12</span>
                             </div>
                             <div>
-                                <FolderClosed color='#00ff88'/>
+                                <FolderClosed color='#00ff88' />
                             </div>
                         </div>
                         <div className='flex justify-between items-start bg-[#1D1D1D] px-5 py-5 rounded-[12px] w-[300px]'>
@@ -42,10 +42,9 @@ const DashboardHome = () => {
                                 <span className='text-[25px] text-white font-bold'>0</span>
                             </div>
                             <div>
-                                <LayoutTemplate  color='#00ff88'/>
+                                <LayoutTemplate color='#00ff88' />
                             </div>
                         </div>
-                        
                     </div>
 
                     {/* Project History */}

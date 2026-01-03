@@ -3,6 +3,7 @@ import { supabase } from '../../Supabase'
 import { LogOut } from 'lucide-react'
 
 const SignOutButton = () => {
+
   const navigate = useNavigate()
 
   const handleSignOut = async () => {
@@ -11,7 +12,7 @@ const SignOutButton = () => {
     if (error) {
       console.error(error.message)
     } else {
-      navigate('/') 
+      navigate('/')
     }
   }
 
@@ -23,7 +24,7 @@ const SignOutButton = () => {
                  hover:bg-red-500/10 transition"
     >
       <LogOut size={18} />
-      
+
     </button>
   )
 }
