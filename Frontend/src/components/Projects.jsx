@@ -8,6 +8,11 @@ const Projects = () => {
   const [platform, setPlatform] = useState("")
   const [app, setApps] = useState("")
   const [color, setColor] = useState("")
+  const [copied, setCopied] = useState(false);
+
+
+  
+
 
   const generateOutput = () => {
     if (!input)
@@ -58,11 +63,33 @@ const Projects = () => {
     { label: "Hybrid App", value: "Hybrid App" }
   ];
 
+  const baseBtn =
+    "px-5 py-2 text-sm font-medium transition-all duration-200 rounded-md";
+
+  const active =
+    "bg-[#00ff88] text-black shadow";
+  const inactive =
+    "text-[#868686] hover:text-white";
+
+  // COPY MESSAGE
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(generateOutput());
+      setCopied(true);
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    } catch (err) {
+      console.error("Copy failed", err);
+    }
+  };
+
 
 
   return (
     <>
-      <div className='bg-[#2A2A2A] min-h-screen'>
+      <div className='bg-[#2A2A2A]'>
         <div className='flex flex-col sm:flex-row gap-10 w-[95%] mx-auto '>
           {/* Input side */}
           <div className='sm:w-[50%] py-6'>
@@ -211,23 +238,77 @@ const Projects = () => {
           </div>
 
           {/* Output side */}
-          <div className='w-[50%] py-6'>
-            <div>
-              <div>
-                <button onClick={() => { setFormat('text') }}>Text</button>
-                <button onClick={() => { setFormat('json') }}>Json</button>
-                <button onClick={() => { setFormat('yaml') }}>YAML</button>
+          <div className=" sm:w-[50%] sm:py-15">
+            {/* Top format switcher */}
+            <div className="flex justify-end mb-3">
+              <div className="flex gap-1 bg-[#1f1f1f] p-1 rounded-lg w-fit">
+                <button
+                  onClick={() => setFormat("text")}
+                  className={`${baseBtn} ${format === "text" ? active : inactive}`}
+                >
+                  Text
+                </button>
+                <button
+                  onClick={() => setFormat("json")}
+                  className={`${baseBtn} ${format === "json" ? active : inactive}`}
+                >
+                  JSON
+                </button>
+                <button
+                  onClick={() => setFormat("yaml")}
+                  className={`${baseBtn} ${format === "yaml" ? active : inactive}`}
+                >
+                  YAML
+                </button>
               </div>
             </div>
-            <div>
-              <h1>Output</h1>
+
+            {/* Output container */}
+            <div className="rounded-xl overflow-hidden border border-[#2a2a2a] bg-[#0e0e0e]">
+
+              {/* Header */}
+              <div className="flex items-center justify-between px-4 py-2 bg-[#141414] border-b border-[#2a2a2a]">
+                <span className="text-sm text-[#868686]">
+                  output.{format}
+                </span>
+
+                <button
+                  onClick={handleCopy}
+                  className="
+      flex items-center gap-2
+      text-xs px-3 py-1.5
+      rounded-md
+      border border-[#2a2a2a]
+      bg-[#0f0f0f]
+      text-[#9affc9]
+      hover:bg-[#1a1a1a]
+      transition
+    "
+                >
+                  {copied ? "Copied ✓" : "Copy"}
+                </button>
+              </div>
+
+
+              {/* Output Area */}
               <textarea
-                rows='6'
+                rows={30}
                 value={generateOutput()}
                 readOnly
+                spellCheck={false}
+                className="
+        w-full bg-transparent px-4 py-3
+        text-sm font-mono text-[#00ff88]
+        outline-none resize-none
+        placeholder:text-[#555]
+      "
               />
+
+              
+
             </div>
           </div>
+
 
         </div>
       </div>
